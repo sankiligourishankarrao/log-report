@@ -1,0 +1,10 @@
+@@ -0,0 +1,9 @@
+Analyze the Apache-style access log at /app/access.log and write a JSON summary report to /app/report.json. Do not modify /app/access.log.
+
+/app/report.json must be a single JSON object with exactly these three keys:
+
+1. "total_requests" (integer): the number of requests in the log, counted as the number of non-empty lines in /app/access.log.
+2. "unique_ips" (integer): the count of distinct client IP addresses, where the client IP is the first whitespace-separated field on each line.
+3. "top_path" (string): the request path (the path token of the HTTP request line, e.g. "/index.html") that appears in the most requests. If two or more paths tie for the most requests, choose the one whose first occurrence appears earliest in the file.
+
+You have 120 seconds to complete this task. Do not cheat by using online solutions or hints specific to this task.
